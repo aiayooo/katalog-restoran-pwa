@@ -1,0 +1,393 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Header */
+.header {
+  width: 100%;
+  padding: 1rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(225, 152, 152);
+}
+
+.header_title {
+  width: 300px;
+  color: rgb(63, 29, 56);
+}
+
+.header__menu {
+  font-size: 30px;
+  margin: 10px auto;
+  display: block;
+  width: 50px;
+  padding: 5px;
+  background-color: rgb(225, 152, 152);
+  border: none;
+}
+
+.nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+.nav-list ul li {
+  list-style-type: none;
+}
+
+.nav-list ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(63, 29, 56);
+  padding: 15px;
+}
+
+.nav-list ul li a:hover {
+  text-decoration: underline;
+  color: rgb(63, 29, 56);
+}
+
+
+/* main */
+main {
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.content {
+  padding: 30px;
+}
+
+.katalog {
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.katalog_label {
+  font-size: 30px;
+  font-weight: lighter;
+  color: rgb(63, 29, 56);
+  border-bottom: 1px solid rgb(63, 29, 56);
+}
+
+
+/* posts */
+.posts {
+  margin: 30px auto auto;
+  text-align: left;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-row-gap: 30px;
+  grid-column-gap: 16px;
+  justify-items: center;
+}
+
+
+/* post item */
+.post-item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.post-item_content {
+  padding: 16px;
+  color: rgb(63, 29, 56);
+}
+
+.post-item_thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.post-item_rating {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(162, 103, 138);
+}
+
+.post-item_title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 16px;
+}
+
+.post-item_title a {
+  text-decoration: none;
+  color: rgb(63, 29, 56);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.post-item_title a:hover {
+  color: rgb(77, 60, 119);
+  cursor: pointer;
+}
+
+.post-item_description {
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 1.5em;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.post-item_city {
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+/* footer */
+footer {
+  background-color: rgb(225, 152, 152);
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+footer p {
+  color: rgb(63, 29, 56);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* skip-link */
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  padding: 12px;
+  background-color: #bf1722;
+  color: white;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+
+/* detail */
+
+.post_detail {
+  margin-top: 2rem;
+  color: rgb(63, 29, 56);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.resto-info_name {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.resto-info_img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  max-width: 800px;
+}
+
+.resto-info_city {
+  margin-top: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.resto-info {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+}
+
+.resto-info_description {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.resto-info_address {
+  margin-top: 16px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.menu_title {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom: 1px solid rgb(63, 29, 56);
+  max-width: 700px;
+  display: inline-block;
+  width: 100%;
+}
+
+.resto-info_menu {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  gap: 2rem;
+}
+
+.menu_category {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menu_category_list {
+  text-align: left;
+}
+
+.reviews_title {
+  text-align: left;
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom: 2px solid rgb(63, 29, 56);
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-row-gap: 30px;
+  grid-column-gap: 16px;
+  justify-items: center;
+}
+
+.resto_reviews {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: rgb(225, 152, 152);
+}
+
+.name_customer {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.review_date {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/*
+  Like
+*/
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.post_review {
+  margin-top: 2rem;
+  color: rgb(63, 29, 56);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post_review_title {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 15px;
+}
+
+.div_customer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+input[type=text], textarea {
+  padding: 10px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 7px;
+  border: 1px solid black;
+  background-color: rgb(225, 152, 152);
+}
+
+input[type=submit] {
+  max-width: 100px;
+  width: 100%;
+  align-self: end;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(225, 152, 152);
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
